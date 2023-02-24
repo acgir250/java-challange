@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "0462764c-5f19-41bd-8403-08a6089d9185",
+		"name": "Axa-lifeInsurance-Challange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "DeleteEmployee- Id",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "axalife",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "abc@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "write",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "localhost:8089/api/v1/employees",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8089/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://localhost:8089/oauth/authorize",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "checktest",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFiY0BnbWFpbC5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NjY2NzAxMiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJqdGkiOiI4YmVlYzExZC0zZmU4LTRmYmQtOGY3ZS1mMDk5MzEzNmEwYTAiLCJjbGllbnRfaWQiOiJnbGVlLW8tbWV0ZXIifQ.PL9UQ28GKUfcEanPRb-vtrTKzHu2BdMLe5muahFzjtU",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\":\"girish1\",\n    \"salary\":\"450\",\n    \"department\":\"IT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/api/v1/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEmployee",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "axalife",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "abc@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "write",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "localhost:8089/api/v1/employees",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8089/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://localhost:8089/oauth/authorize",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "checktest",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFiY0BnbWFpbC5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NjY2NzAxMiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJqdGkiOiI4YmVlYzExZC0zZmU4LTRmYmQtOGY3ZS1mMDk5MzEzNmEwYTAiLCJjbGllbnRfaWQiOiJnbGVlLW8tbWV0ZXIifQ.PL9UQ28GKUfcEanPRb-vtrTKzHu2BdMLe5muahFzjtU",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\":\"girish1\",\n    \"salary\":\"450\",\n    \"department\":\"IT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/api/v1/employees/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "axalife",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "abc@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "write",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "localhost:8089/api/v1/employees",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8089/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://localhost:8089/oauth/authorize",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "checktest",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFiY0BnbWFpbC5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NjY2NzAxMiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJqdGkiOiI4YmVlYzExZC0zZmU4LTRmYmQtOGY3ZS1mMDk5MzEzNmEwYTAiLCJjbGllbnRfaWQiOiJnbGVlLW8tbWV0ZXIifQ.PL9UQ28GKUfcEanPRb-vtrTKzHu2BdMLe5muahFzjtU",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\":\"girish1\",\n    \"salary\":\"450\",\n    \"department\":\"IT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/api/v1/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignInUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8089/api/signin?email=abc1@gmail.com&password=123",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "abc1@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "axalife",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abc@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "write",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "localhost:8089/api/v1/employees",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8089/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8089/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "checktest",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFiY0BnbWFpbC5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NjY2NzAxMiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJqdGkiOiI4YmVlYzExZC0zZmU4LTRmYmQtOGY3ZS1mMDk5MzEzNmEwYTAiLCJjbGllbnRfaWQiOiJnbGVlLW8tbWV0ZXIifQ.PL9UQ28GKUfcEanPRb-vtrTKzHu2BdMLe5muahFzjtU",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"name\":\"girish1\",\n    \"salary\":\"450\",\n    \"department\":\"IT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/api/v1/employees/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployee",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "axalife",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abc@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "write",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "localhost:8089/api/v1/employees",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8089/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8089/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "checktest",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFiY0BnbWFpbC5jb20iLCJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NjY2NzAxMiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJqdGkiOiI4YmVlYzExZC0zZmU4LTRmYmQtOGY3ZS1mMDk5MzEzNmEwYTAiLCJjbGllbnRfaWQiOiJnbGVlLW8tbWV0ZXIifQ.PL9UQ28GKUfcEanPRb-vtrTKzHu2BdMLe5muahFzjtU",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"name\":\"girish1\",\n    \"salary\":\"450\",\n    \"department\":\"IT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/api/v1/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

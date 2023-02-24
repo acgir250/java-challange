@@ -1,0 +1,31 @@
+To Get/Create Accees Token (postman):
+
+- Go to the Authorization panel from the request section
+- Select from the drop down OAuth2.0
+- In Configuration New token
+- Add Token name and select grant type Password Credentials
+- Put http://localhost:8089/oauth/token in access token url
+- Client Id  is configured in properties file name "jwt.clientId"
+- Client Secret is configured in properties file name "jwt.client-secret"
+- Add  username and password for which user you need to do authorization check the userdetails.txt or signup one user
+- scope you can select as read or write
+- Select  Send as basic auth header in client authentication
+- Hit the Get New access token after that if credentials are true then
+- you get a list of things in response like access token,token type, refresh_token,expires_in,scope,jti
+- After that push "Use Token" Button.
+
+Note:  Accessibility of token is 12 hours after that refresh token will be used to get access token and refresh token is valid for 30 days.
+
+
+Get Access Token from refresh Token (postman):
+
+- you can use this url localhost:8089/oauth/token? with post method
+- Add parameters like below
+  grant_type:refresh_token
+  refresh_token: <Add your refresh token>
+  clientId : which you add at time of creating a token
+- Also Add authorization value from request section
+- Select basic authentication and add
+- clientId and secret
+- After the push the send button
+- Response you will get all fields which will be same as creating/get a access token.

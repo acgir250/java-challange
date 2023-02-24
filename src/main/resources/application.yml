@@ -1,0 +1,40 @@
+#Server error and port configuration
+server:
+    error:
+        include-binding-errors: never
+        include-message: never
+        include-stacktrace: never
+    port: 8089
+
+ # Json web token configuration
+jwt:
+    aceessTokenValidititySeconds: 100
+    client-secret: secret
+    clientId: axalife
+    refreshTokenValiditySeconds: 1000
+
+# Framework Configuration
+
+spring:
+    cache:
+        jcache:
+            config: classpath:ehcache.xml
+    datasource:
+        driver-class-name: org.h2.Driver
+        password: pass
+        url: jdbc:h2:mem:testdb
+        username: root
+    h2:
+        console:
+            enabled: true
+    mvc:
+        throw-exception-if-no-handler-found: true
+    resources:
+        add-mappings: false
+
+# logging levels configurations.
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG

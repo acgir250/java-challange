@@ -1,0 +1,10 @@
+Admin User Details :
+
+Username : test@gmail.com
+password : pass
+
+
+Normal User Details:
+
+Username : test2@gmail.com
+password : 123
