@@ -45,7 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (result.isPresent()) {
             return result.get();
         } else {
-            throw new EntityNotFoundException(EmployeeService.class, "Employee doesn't exists with employeeId:::", String.valueOf(employeeId));
+            throw new javax.persistence.EntityNotFoundException("Employee does not exists for id :::"+employeeId);
         }
     }
 
@@ -66,7 +66,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             employeeRepository.save(employee);
             cache.put(employeeId, employee);
         } else {
-            throw new EntityNotFoundException(EmployeeService.class, "Employee doesn't exists with employeeId:::", String.valueOf(employeeId));
+            throw new javax.persistence.EntityNotFoundException("Employee does not exists for id :::"+employeeId);
         }
     }
 
